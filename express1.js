@@ -1,4 +1,4 @@
-const express = require ('Express'); 
+const express = require ('express'); 
 const exp1 = express(); 
 port = 3000; 
 
@@ -17,8 +17,8 @@ exp1.get('/api/movies', (req, res)=>{
     res.send('All films');
 });
 
-exp1.get('/api/movies\<movie id\>', (req, res)=>{
-    res.json({id:\<movie id\});
+exp1.get('/api/movies\:movie_id ', (req, res)=>{
+    res.json({id:movie});
 });
 
 exp1.get('/api/employee', (req, res)=>{
@@ -26,5 +26,5 @@ exp1.get('/api/employee', (req, res)=>{
 });
 
 exp1.get('/api/employee?name=\<employee name\>', (req, res)=>{
-    res.status(404).send('Unable to retrieve employee' + <name of employee the employee \>);
+    res.status(404).send('Unable to retrieve employee' + name);
 });
